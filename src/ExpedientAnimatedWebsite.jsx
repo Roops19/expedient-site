@@ -1,81 +1,70 @@
 import React from 'react';
+import './styles.css';
 
 const ExpedientAnimatedWebsite = () => {
   return (
-    <div>
-      {/* Navbar Header */}
-      <header>
-        <h1>EXPEDIENT</h1>
+    <div className="expedient-website">
+      <header className="header">
+        <h1>Welcome to Expedient Animated Website</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Sectors</li>
+            <li>Services</li>
+            <li>Think Tank</li>
+            <li>Work With Us</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
       </header>
 
-      {/* Home Section with 3P Framework */}
-      <section id="home">
-        <h2>Home Section</h2>
-        <p>Welcome to Expedient!</p>
-        <div className="framework">
-          <h3>3P Framework</h3>
-          <ul>
-            <li>People</li>
-            <li>Process</li>
-            <li>Product</li>
-          </ul>
-        </div>
+      <section className="animation-section">
+        <h2>Animations</h2>
+        {/* Animation components go here */}
       </section>
 
-      {/* About Section with Cards */}
-      <section id="about">
-        <h2>About Us</h2>
-        <div className="cards">
-          <div className="card">Card 1</div>
-          <div className="card">Card 2</div>
-          <div className="card">Card 3</div>
-        </div>
-      </section>
-
-      {/* Services Section with Tabbed Content */}
-      <section id="services">
+      <section className="services-section">
         <h2>Our Services</h2>
-        <div className="tabs">
-          <button>Service 1</button>
-          <button>Service 2</button>
-          <button>Service 3</button>
-          <div className="content">
-            <p>Service details go here.</p>
-          </div>
-        </div>
+        <p>Details about services offered by Expedient.</p>
+        {/* Services data goes here */}
       </section>
 
-      {/* Sectors Section */}
-      <section id="sectors">
+      <section className="3p-framework">
+        <h2>3P Framework</h2>
+        <p>Description of the 3P framework implementation.</p>
+        {/* Add additional content as needed */}
+      </section>
+
+      <section className="sectors">
         <h2>Sectors</h2>
-        <p>Information about sectors we serve.</p>
+        <p>Information about various sectors we operate in.</p>
+        {/* List of sectors */}
       </section>
 
-      {/* Think Tank with Case Studies */}
-      <section id="think-tank">
+      <section className="think-tank">
         <h2>Think Tank</h2>
-        <p>Explore our case studies.</p>
+        <p>Description of our think tank activities.</p>
       </section>
 
-      {/* Associate Model Section */}
-      <section id="associate-model">
-        <h2>Associate Model</h2>
-        <p>Details about the associate model.</p>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact">
-        <h2>Contact Us</h2>
+      <section className="work-with-us">
+        <h2>Work With Us</h2>
         <form>
           <label>Name:</label>
           <input type="text" name="name" required />
           <label>Email:</label>
           <input type="email" name="email" required />
-          <label>Message:</label>
-          <textarea name="message" required></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit">Register</button>
         </form>
       </section>
+
+      <section className="contact">
+        <h2>Contact Us</h2>
+        <p>Email us at: contact@expedient.com</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Expedient. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
