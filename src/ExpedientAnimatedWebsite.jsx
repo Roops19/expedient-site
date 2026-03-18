@@ -354,23 +354,6 @@ const metrics = [
   ["Frameworks", "Created & deployed"],
 ];
 
-const frameworkNodePositions = [
-  {
-    wrapper: "left-1/2 top-2 -translate-x-1/2",
-    svg: "M160 96 C145 58 124 34 94 20",
-    label: "top-[108px] left-1/2 -translate-x-1/2",
-  },
-  {
-    wrapper: "left-4 bottom-12",
-    svg: "M120 208 C82 192 62 166 50 132",
-    label: "left-3 bottom-0",
-  },
-  {
-    wrapper: "right-4 bottom-12",
-    svg: "M200 208 C238 192 258 166 270 132",
-    label: "right-1 bottom-0",
-  },
-];
 
 
 function SectionHeading({ eyebrow, title, description }) {
@@ -403,7 +386,6 @@ export default function ExpedientAnimatedWebsite() {
   };
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeService, setActiveService] = useState("advisory");
-  const [activeFramework, setActiveFramework] = useState("People");
 
   const selectedService = useMemo(
     () => services.find((service) => service.key === activeService) || services[0],
@@ -411,10 +393,7 @@ export default function ExpedientAnimatedWebsite() {
   );
 
   const selectedFramework = useMemo(
-    () => threePs.find((item) => item.title === activeFramework) || threePs[0],
-    [activeFramework]
-  );
-
+  
   return (
     <div className="min-h-screen scroll-smooth bg-white text-slate-900">
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
