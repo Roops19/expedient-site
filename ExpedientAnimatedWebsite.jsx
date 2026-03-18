@@ -307,7 +307,7 @@ export default function ExpedientAnimatedWebsite() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <button onClick={() => scrollToSection("home")} className="flex items-center gap-3 text-left">
             <img
-              src="/expedient-logo.png"
+            src={expedientLogo}
               alt="Expedient logo"
               className="h-10 w-auto"
             />
