@@ -1,102 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './styles.css'; // Tailwind CSS file
+import './App.css'; // Assuming your Tailwind CSS is imported here
 
 const ExpedientAnimatedWebsite = () => {
   return (
-    <div className="bg-white text-gray-800">
-      {/* Header with Navigation */}
-      <header className="flex justify-between items-center p-4 bg-gray-900 text-white">
-        <div className="flex items-center">
-          <img src="/path/to/expedient-logo.svg" alt="Expedient Logo" className="h-10" />
-          <nav className="ml-10">
-            <ul className="flex space-x-4">
-              <li><a href="#hero" className="hover:underline">Home</a></li>
-              <li><a href="#services" className="hover:underline">Services</a></li>
-              <li><a href="#sectors" className="hover:underline">Sectors</a></li>
-              <li><a href="#think-tank" className="hover:underline">Think Tank</a></li>
-              <li><a href="#contact" className="hover:underline">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+    <div className="font-sans">
+      {/* Header */}
+      <header className="bg-gray-800 text-white p-4">
+        <h1 className="text-2xl font-bold">Expedient Website</h1>
       </header>
-
+      
       {/* Hero Section */}
-      <section id="hero" className="flex items-center justify-center h-screen bg-cover bg-center" style={{backgroundImage: 'url(/path/to/hero-image.jpg)'}}>
-        <motion.h1 className="text-5xl font-bold text-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}>
-          Welcome to Our Expedient Solutions
-        </motion.h1>
-      </section>
-
+      <motion.section className="hero bg-cover bg-center h-screen" 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}>
+        <h2 className="text-4xl text-white">Welcome to Our Website</h2>
+      </motion.section>
+      
+      {/* About Section */}
+      <motion.section className="about p-8"
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">About Us</h3>
+        <p>We are committed to excellence...</p>
+      </motion.section>
+      
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-100">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Map through services data to create service cards */}
-          </div>
-        </div>
-      </section>
-
+      <motion.section className="services p-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Our Services</h3>
+        <ul>
+          <li>Service 1</li>
+          <li>Service 2</li>
+          <li>Service 3</li>
+        </ul>
+      </motion.section>
+      
+      {/* 3P Framework Section */}
+      <motion.section className="framework p-8"
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Our 3P Framework</h3>
+        <p>Description of the framework...</p>
+      </motion.section>
+      
       {/* Sectors Section */}
-      <section id="sectors" className="py-20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Sectors We Serve</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Sectors data goes here */}
-          </div>
-        </div>
-      </section>
-
+      <motion.section className="sectors p-8"
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Sectors We Serve</h3>
+        <p>Details on sectors...</p>
+      </motion.section>
+      
       {/* Think Tank Section */}
-      <section id="think-tank" className="py-20 bg-gray-100">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Think Tank</h2>
-          {/* Think Tank content */}
-        </div>
-      </section>
-
+      <motion.section className="think-tank p-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Our Think Tank</h3>
+        <p>Information about our think tank...</p>
+      </motion.section>
+      
       {/* Work With Us Section */}
-      <section id="work-with-us" className="py-20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Work With Us</h2>
-          {/* Work with us content */}
-        </div>
-      </section>
-
-      {/* 3P Framework Showcase Section */}
-      <section id="3p-framework" className="py-20 bg-gray-100">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">3P Framework Showcase</h2>
-          <div className="flex items-center justify-center">
-            <div className="3P-logo"> {/* Add 3P Logo here */} </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl">People</h3>
-              <h3 className="text-xl">Process</h3>
-              <h3 className="text-xl">Performance</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <motion.section className="work-with-us p-8"
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Work With Us</h3>
+        <p>Join our team...</p>
+      </motion.section>
+      
       {/* Contact Form Section */}
-      <section id="contact" className="py-20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-          <form className="space-y-4">
-            <input type="text" placeholder="Your Name" className="border p-2 w-full" />
-            <input type="email" placeholder="Your Email" className="border p-2 w-full" />
-            <textarea placeholder="Your Message" className="border p-2 w-full" rows="4"></textarea>
-            <button type="submit" className="bg-blue-600 text-white p-2">Send Message</button>
-          </form>
-        </div>
-      </section>
-
+      <motion.section className="contact p-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}>
+        <h3 className="text-xl">Contact Us</h3>
+        <form>
+          <input type="text" placeholder="Your Name" className="p-2 border border-gray-400" />
+          <input type="email" placeholder="Your Email" className="p-2 border border-gray-400" />
+          <textarea placeholder="Your Message" className="p-2 border border-gray-400"></textarea>
+          <button type="submit" className="bg-blue-500 text-white p-2">Send</button>
+        </form>
+      </motion.section>
+      
       {/* Footer */}
-      <footer className="bg-gray-900 text-white text-center p-4">
+      <footer className="bg-gray-800 text-white p-4">
         <p>&copy; 2026 Expedient. All rights reserved.</p>
       </footer>
     </div>
