@@ -1,4 +1,4 @@
-import ExpedientAnimatedWebsite from './src/ExpedientAnimatedWebsite'
+import ExpedientAnimatedWebsite from './ExpedientAnimatedWebsite'
 
 export default function App() {
   return <ExpedientAnimatedWebsite />
