@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import expedientLogo from './expedient-logo.png';
 import {
   ArrowRight,
   Briefcase,
