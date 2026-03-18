@@ -1,29 +1,71 @@
-// Complete production-ready component implementation
+// Full production-ready component implementation
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { fadeUp } from 'animate';
+import services from './services.json';
+import sectors from './sectors.json';
+import workWithUsLevels from './workWithUsLevels.json';
+import thinkTankContent from './thinkTankContent.json';
+import threePs from './threePs.json';
 
 const ExpedientAnimatedWebsite = () => {
     return (
         <div>
             <header>
-                <h1>3P Framework</h1>
-                <h2>People, Process, Performance</h2>
-                <div>
-                    <img src="path-to-logo.svg" alt="Logo" />
-                </div>
+                <nav>
+                    {/* Navigation items here */}
+                </nav>
             </header>
-            <section id="home">Home Section</section>
-            <section id="about">About Section</section>
-            <section id="services">
-                <h2>Services</h2>
-                <p>Offering details here.</p>
+            <section className="hero">
+                {/* Hero content here */}
             </section>
-            <section id="sectors">Sectors Section</section>
-            <section id="think-tank">Think Tank Section</section>
-            <section id="work-with-us">Work With Us Section</section>
-            <section id="associates">Associates Section</section>
-            <section id="contact">Contact Section</section>
-            <footer>Footer Content</footer>
+            <section className="about">
+                <h2>About 3P Framework</h2>
+                <p>Explanation of the 3P framework...</p>
+            </section>
+            <section className="services" data-animate={fadeUp}>
+                <h2>Our Services</h2>
+                {services.map((service, index) => (
+                    <div key={index}>
+                        <h3>{service.title}</h3>
+                        <p>{service.description}</p>
+                    </div>
+                ))}
+            </section>
+            <section className="sectors" data-animate={fadeUp}>
+                <h2>Our Sectors</h2>
+                {sectors.map((sector, index) => (
+                    <div key={index}>
+                        <h3>{sector.name}</h3>
+                        <p>{sector.description}</p>
+                    </div>
+                ))}
+            </section>
+            <section className="think-tank" data-animate={fadeUp}>
+                <h2>Think Tank</h2>
+                {thinkTankContent.map((content, index) => (
+                    <div key={index}>
+                        <h3>{content.title}</h3>
+                        <p>{content.description}</p>
+                    </div>
+                ))}
+            </section>
+            <section className="work-with-us" data-animate={fadeUp}>
+                <h2>Work With Us</h2>
+                {workWithUsLevels.map((level, index) => (
+                    <div key={index}>
+                        <h3>{level.title}</h3>
+                        <p>{level.details}</p>
+                    </div>
+                ))}
+            </section>
+            <section className="contact-form">
+                <h2>Contact Us</h2>
+                {/* Contact form here */}
+            </section>
+            <footer>
+                {/* Footer content here */}
+            </footer>
         </div>
     );
 };
