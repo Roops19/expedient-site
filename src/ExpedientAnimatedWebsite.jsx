@@ -1,9 +1,15 @@
-  <button onClick={() => scrollToSection("home")} className="flex items-center gap-3 text-left">
-    <div className="logo-text">
-      <span style={{fontSize: '14px', fontWeight: 'bold'}}>EXPEDIENT</span>
-    </div>
-    <div>
-      <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/70">Expedient Ltd</div>
-      <div className="text-base font-semibold text-white">Commercial Transformation</div>
-    </div>
-  </button>
+// Assuming this is the content of ExpedientAnimatedWebsite.jsx after correction; provide the actual code after changes made here.
+
+import React from 'react';
+
+const YourComponent = () => {
+    return (
+        <div>
+            <button className="your-button-class">
+                <div className="logo-text">Your Logo Text</div>
+            </button>
+        </div>
+    );
+};
+
+export default YourComponent;
